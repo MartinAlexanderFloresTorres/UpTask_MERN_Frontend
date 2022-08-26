@@ -7,7 +7,7 @@ const PreviewProyecto = ({ proyecto }) => {
 
   return (
     <div className="text-center sm:text-left border-b p-5 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div className="flex items-center gap-3">
+      <div className="sm:flex items-center gap-3">
         <div>
           <p className="flex-1 break-all">{nombre}</p>
           <span className="text-sm text-gray-500 uppercase break-all">
@@ -16,7 +16,7 @@ const PreviewProyecto = ({ proyecto }) => {
           </span>
         </div>
         {auth._id !== creador && (
-          <p className="bg-green-500 text-white px-4 py-1 text-sm font-bold rounded-lg">
+          <p className="bg-green-500 mt-3 sm:mt-0 text-white px-4 py-1 text-sm font-bold rounded-lg">
             Colaborador
           </p>
         )}
