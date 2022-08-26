@@ -87,7 +87,7 @@ const Login = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value.trimStart())}
             type="email"
-            placeholder="Email de registro"
+            placeholder="Ingrese su email"
           />
         </div>
         <div className="my-5">
@@ -103,7 +103,7 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value.trimStart())}
             type="password"
-            placeholder="Password de registro"
+            placeholder="Ingrese su password"
           />
         </div>
         <ButtonLoad estado={cargando}>

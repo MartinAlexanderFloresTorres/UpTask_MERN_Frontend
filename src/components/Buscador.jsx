@@ -40,7 +40,7 @@ function Buscador() {
             <Combobox.Options
               className={`${
                 busquedad !== "" ? "shadod border" : ""
-              } absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white text-base  focus:outline-none sm:text-sm`}
+              } absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white text-base  focus:outline-none sm:text-sm z-20`}
             >
               {proyectosFiltrados.length === 0 && busquedad !== "" ? (
                 <div className="relative cursor-default select-none py-2 px-4 text-gray-700">

@@ -7,7 +7,7 @@ const PreviewProyecto = ({ proyecto }) => {
 
   return (
     <div className="text-center sm:text-left border-b p-5 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div className="sm:flex items-center gap-3">
+      <div className="md:flex items-center gap-3">
         <div>
           <p className="flex-1 break-all">{nombre}</p>
           <span className="text-sm text-gray-500 uppercase break-all">

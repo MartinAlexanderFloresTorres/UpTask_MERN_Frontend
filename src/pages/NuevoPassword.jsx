@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 const NuevoPassword = () => {
   const [alerta, setAlerta] = useState({ error: false, msg: "" });
   const [password, setPassword] = useState("");
+  const [password2, setPassword2] = useState("");
   const [tokenValido, setTokenValido] = useState(false);
   const [cargando, setCargando] = useState(false);
   const [passwordModificado, setPasswordModificado] = useState(false);
@@ -35,11 +36,22 @@ const NuevoPassword = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if ([password, password2].includes("")) {
+      setAlerta({
+        error: true,
+        msg: "Todo los campos son obligatorios",
+      });
+      return;
+    }
     if (password.length < 6) {
       setAlerta({
         error: true,
         msg: "El password debe ser minimo 6 caracteres",
       });
+      return;
+    }
+    if (password !== password2) {
+      setAlerta({ error: true, msg: "Los password nos son iguales" });
       return;
     }
     setAlerta({
@@ -93,6 +105,22 @@ const NuevoPassword = () => {
               onChange={(e) => setPassword(e.target.value.trimStart())}
               type="password"
               placeholder="Escribe su nuevo password"
+            />
+          </div>
+          <div className="mb-5">
+            <label
+              className="uppercase text-gray-600 block text-xl font-bold mb-3"
+              htmlFor="password2"
+            >
+              Nuevo Password
+            </label>
+            <input
+              className="w-full p-3 border rounded-xl bg-gray-50 focus-visible:outline-sky-700"
+              id="password2"
+              value={password2}
+              onChange={(e) => setPassword2(e.target.value.trimStart())}
+              type="password"
+              placeholder="Repita su password"
             />
           </div>
           <ButtonLoad estado={cargando}>

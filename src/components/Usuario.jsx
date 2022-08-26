@@ -10,7 +10,7 @@ export default function Usuario() {
   const { pathname } = useLocation();
   const ruta = !pathname.includes("editar-perfil");
   return (
-    <div className="text-right z-50">
+    <div className="text-right z-10">
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button
@@ -53,9 +53,9 @@ export default function Usuario() {
                   </svg>
                   <span>{auth?.nombre}</span>
                 </div>
-                <div className="text-sm text-gray-400 font-medium break-all">
+                <a href={`mailto:${auth?.email}`} target="_blank" className="text-sm text-sky-600 font-medium break-all block hover:underline">
                   {auth?.email}
-                </div>
+                </a>
               </div>
             </div>
 

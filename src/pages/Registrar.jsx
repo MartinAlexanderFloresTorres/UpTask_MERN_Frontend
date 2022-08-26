@@ -31,7 +31,10 @@ const Registrar = () => {
     }
     // validar el nombre no tan corto ni largo
     if (campos.nombre.split(" ").join("").length < 4) {
-      setAlerta({ error: true, msg: "El nombre es muy corto, minimo 4 caracteres" });
+      setAlerta({
+        error: true,
+        msg: "El nombre es muy corto, minimo 4 caracteres",
+      });
       return;
     }
     // validar el nombre no tan corto ni largo
@@ -79,7 +82,7 @@ const Registrar = () => {
   };
   return (
     <>
-           <h1 className="text-sky-600 font-bold text-5xl sm:text-6xl capitalize sm:text-left text-center">
+      <h1 className="text-sky-600 font-bold text-5xl sm:text-6xl capitalize sm:text-left text-center">
         Crea tu cuenta y administra{" "}
         <span className="text-slate-700">tus proyectos</span>
       </h1>
@@ -123,6 +126,10 @@ const Registrar = () => {
             placeholder="Ingrese su Email"
           />
         </div>
+        <p className="text-gray-500 mb-4 text-sm">
+          <span className=" text-lg text-gray-700 font-bold">Nota: </span>{" "}
+          Ingrese un email valido para poder confirmarlo mediante un mensaje de email.
+        </p>
         <div className="my-5">
           <label
             className="uppercase text-gray-600 block text-xl font-bold mb-3"
@@ -157,6 +164,7 @@ const Registrar = () => {
             placeholder="Repetir Password"
           />
         </div>
+
         <ButtonLoad estado={cargando}>
           {cargando ? "Creando Cuenta...." : "Crear Cuenta"}
         </ButtonLoad>
