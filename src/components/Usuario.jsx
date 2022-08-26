@@ -34,7 +34,7 @@ export default function Usuario() {
           <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="p-3 text-center">
               <div className="text-gray-500 w-full text-smp-3 rounded-md  font-bold block">
-                <div className="break-all uppercase flex gap-2 mb-2 items-center">
+                <div className="break-all uppercase flex gap-2 mb-2 items-center justify-center">
                   <svg
                     className="w-6 h-6"
                     fill="none"
