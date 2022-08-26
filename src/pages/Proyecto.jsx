@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Alerta from "../components/Alerta";
 import Colaborador from "../components/Colaborador";
 import ModalFormTarea from "../components/ModalFormTarea";
-import Opciones from "../components/opciones";
+import Opciones from "../components/Opciones";
 import Tarea from "../components/Tarea";
 import useAdmin from "../hooks/useAdmin";
 import useProyectos from "../hooks/useProyectos";
